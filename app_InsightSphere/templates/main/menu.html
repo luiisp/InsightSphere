@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}?v1">
+    <title>Insight Sphere | Menu de {{ user.username }} </title>
+    <link rel="icon" href="{% static 'assets/img/512logo.png' %}" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <img src="{% static 'assets/img/512logo.png' %}" alt="">
+                
+            </div>
+            <nav>
+                <ul>
+                    {% if user.username != 'Anonymous' %}
+                    <li>
+                        <a href="/newc/" id="new-channel">Novo canal</a>
+                    </li>
+                    {% endif %}
+                    {% if user.is_staff %}
+                    <li>
+                        <a href="/admin/" >ADMIN</a>
+                    </li>
+                    {% endif %}
+   
+                </ul>
+                <div class="login-signup">
+                    <a href="">Login</a> or <a href="">Signup</a>
+                </div>
+            </nav>
+        </div>
+        <form id="search" method="post">
+            {% csrf_token %}
+            <input type="text"placeholder="Buscar no Insight Sphere" name="search" autocomplete="off" autocapitalize="off">
+        </form>
+        <div class="header-right">
+            <div class="profile">
+                <div>
+                    <p>{{ user.apelido }}</p>
+                    <p>@{{ user.username }}</p>
+                </div>
+
+            </div>
+            <div class="login-signup">
+                <a href="{% url 'logout' %}">Sair</a>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="main">
+        <div id="content">
+            {% if view %}
+            <h1>Todos os nossos canais</h1>
+            <div id="chats">
+                {% for channel in channels %}
+                {% if channel.creator == request.user %}
+                <div id="user-channel">
+                    <div id="try">
+                        <div>
+                            <h1>{{ channel.name }}</h1>
+                            {% if channel.verified == True %}
+                            <img src="{% static 'assets/img/verificado.png' %}" id="verific" alt="verificado">
+                            {% endif %}
+                        </div>
+                        <a href="{% url 'channel_detail' channel.creator.username channel.id %}" id="entrarr">Entrar </a>
+                    </div>
+                {%else%}
+                <div id="channell">
+                    <div id="try">
+                        <div>
+                            <h1>{{ channel.name }}</h1>
+                            {% if channel.verified == True %}
+                            <img src="{% static 'assets/img/verificado.png' %}" id="verific" alt="verificado">
+                            {% endif %}
+                        </div>
+                        
+                        <a href="{% url 'channel_detail' channel.creator.username channel.id %}" id="entrarr">Entrar </a>
+                    </div>
+                {% endif %}
+
+
+
+                    <div id="extra">
+                        
+                        
+                        {% if channel.creator == request.user %}
+                        <p>{{channel.description}} </p>
+                        <p id="made">Criado por Você</p>
+                        <a href="{% url 'delete' channel_id=channel.id %}" id="delete">Deletar</a>
+                        {% else %}
+                        <p>{{channel.description}} </p>
+                        <p id="made">Criado por <a href="/@{{ channel.creator.username }}">@{{ channel.creator.username }} </a></p>
+                        {% endif %}
+                    
+                    </div>
+
+                </div>
+
+{% endfor %}
+
+
+            </div>
+            {%else%}
+
+            <div id="content">
+                <h1>{{result}}</h1>
+                <div id="chats">
+                    {% for channel in channels %}
+                    {% if channel.creator == request.user %}
+                    <div id="user-channel">
+                        <div id="try">
+                            <div>
+                                <h1>{{ channel.name }}</h1>
+                                {% if channel.verified == True %}
+                                <img src="{% static 'assets/img/verificado.png' %}" id="verific" alt="verificado">
+                                {% endif %}
+                            </div>
+                            <a href="{% url 'channel_detail' channel.creator.username channel.id %}" id="entrarr">Entrar </a>
+                        </div>
+                    {%else%}
+                    <div id="channell">
+                        <div id="try">
+                            <div>
+                                <h1>{{ channel.name }}</h1>
+                                {% if channel.verified == True %}
+                                <img src="{% static 'assets/img/verificado.png' %}" id="verific" alt="verificado">
+                                {% endif %}
+                            </div>
+                            
+                            <a href="{% url 'channel_detail' channel.creator.username channel.id %}">Entrar </a>
+                        </div>
+                    {% endif %}
+    
+    
+    
+                        <div id="extra">
+                            
+                            
+                            {% if channel.creator == request.user %}
+                            <p>{{channel.description}} </p>
+                            <p id="made">Criado por Você</p>
+                            <a href="{% url 'delete' channel_id=channel.id %}" id="delete">Deletar</a>
+                            {% else %}
+                            <p>{{channel.description}} </p>
+                            <p id="made">Criado por @{{ channel.creator.username }}</p>
+                            {% endif %}
+                        
+                        </div>
+    
+                    </div>
+    
+    {% endfor %}
+    
+    
+                
+                <a href="/menu/">Retornar ao menu</a>
+            </div>
+            
+            {% endif %}
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+</body>
+    <script src="{% static 'js/menu.js'%}?v1">
+</script>
+</html>

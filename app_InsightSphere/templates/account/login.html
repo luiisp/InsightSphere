@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}?v1">
+    <title>Insight Sphere | Login</title>
+    <link rel="icon" href="{% static 'assets/img/512logo.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <img id="logo"  src="{% static 'assets/img/512logo.png' %}" alt="logo">
+        <div id="login">
+            <h1>Bem vindo de volta!</h1>
+            {% if error_message %}
+            <p id="warn">{{ error_message }}</p>
+            {% endif %}
+            <form method="post" id="card-login">
+                {% csrf_token %}
+                <input type="text"  name="username" placeholder="Username ou Email" autocomplete="off">
+                <input type="password" name="password" autocomplete="off" placeholder="Senha">
+                <button type="submit">Login!</button>    
+                <p id="terms">Ao fazer login você concorda com nossos termos de uso.</p>
+                <a href="/new">Ainda nao possui uma conta?</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

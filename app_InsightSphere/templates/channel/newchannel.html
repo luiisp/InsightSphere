@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/newchannel.css'%}">
+    <link rel="stylesheet" href="{% static 'icons\uicons-solid-rounded\css\uicons-solid-rounded.css' %}">
+    <title>Insight Sphere | Novo Canal</title>
+    <link rel="icon" href="{% static 'assets/img/512logo.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <img id="logo"  src="{% static 'assets/img/512logo.png' %}" alt="logo">
+        <div id="login">
+            <h1>Crie um novo canal</h1>
+            {% if error %}
+            <p id="warn">{{ error }}</p>
+            {% endif %}
+            <form method="post" name="pt1" id="card-login" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="pt1">
+                <input type="text" name="name" placeholder="Nome para do canal" autocomplete="off" id="input-text">
+                <input type="text" name="description" placeholder="Descrição do canal" autocomplete="off" id="input-text">
+                <button type="submit">Criar</button>
+            </form>
+            <p id="terms">Ao criar um novo canal você concorda em respeitar nossos termos de uso.</p>
+            
+        </div>
+    </div>
+</body>
+</html>

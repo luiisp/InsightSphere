@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/channel.css'%}?v1">
+    <link rel="stylesheet" href="{% static 'icons\uicons-solid-rounded\css\uicons-solid-rounded.css' %}">
+    <title>Insight Sphere | {{ canal.name }}</title>
+    <link rel="icon" href="{% static 'assets/img/512logo.png' %}" type="image/x-icon">
+</head>
+<body>
+
+<div id="load">
+    
+    <img src="{% static 'assets/img/512logo.png' %}" alt="logo">
+    <h1>{{ canal.name }}</h1>
+    <p>Insight Sphere</p>
+
+</div>
+
+ 
+
+
+<div id="main">
+    <header>
+
+        <div class="header-right">
+            <div class="profile">
+                {% if canal.verified == True %}
+                <img src="{% static 'assets/img/verificado.png' %}" id="verific" alt="verificado">
+                {% endif %}
+                <div>
+                    <p>{{ canal.name}}</p>
+                    <p>By @{{ canal.creator }}</p>
+                </div>
+
+            </div>
+            <div class="login-signup">
+                <a href="{% url 'menu' %}">Menu</a>
+            </div>
+        </div>
+    </header>
+<div id="fixed">
+
+
+<div id="msgs-call" >
+
+</div>
+</div>
+
+</div>
+<form id="input">
+<input type="text" id="msg-send" placeholder="Escreva algo..." autocomplete="off" autocapitalize="off">
+<button id="send"><i
+class=
+    " fi-sr-paper-plane-top"
+    ></i></button>
+</form>
+
+
+
+</body>
+<script>
+    const userData = {
+        username: "{{ user.username }}",
+        apelido: "{{ user.apelido }}",
+        creator: "{{ canal.creator }}",
+        chatId: "{{ canal.id }}"
+    };
+</script>
+<script src="{% static 'js/channels.js' %}?v1"></script>
+</html>
+
+
+
