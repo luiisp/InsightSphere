@@ -1,7 +1,7 @@
 # Insight Sphere
 
-## O Insight Sphere é um projeto de uma aplicação de chat feita na web utilizando django channels e websockets
-## cada usuario pode criar seus canais e os outros podem entrar nestes canais e conversarem livremente 
+#### O Insight Sphere é um projeto de uma aplicação de chat feita na web utilizando django channels e websockets
+##### cada usuario pode criar seus canais e os outros podem entrar nestes canais e conversarem livremente 
 
 
 
