@@ -1,26 +1,31 @@
 # Insight Sphere
 
-#### O Insight Sphere é um projeto de uma aplicação de chat feita na web utilizando django channels e websockets
-##### cada usuario pode criar seus canais e os outros podem entrar nestes canais e conversarem livremente 
+#### O Insight Sphere é uma aplicação de chat feita na web utilizando django, channels e websocket💡
 
+Tag this project with a star 🌟
 
-
+### Preview
 https://github.com/luiisp/InsightSphere/assets/115284250/01076467-2006-49fb-8deb-b1dae4b4ba58
 
 
+##### Crie, gerencie e converse em tempo real em canais usando o Insight Sphere
 
 
-# Como acessar:
+# Acesssando:
+
 ## Pré-requisitos
 
 Certifique-se de ter os seguintes pré-requisitos instalados em sua máquina:
 
 - Python (versão 3.0+ recomendado)
 - pip (gerenciador de pacotes do Python)
+- Django
+- Channels
+- Daphne
 
-## Inicialização do Projeto
+## Running
 
-### 1. clone o repositório:
+### 1. Clone o repositório:
    
 ```git clone https://github.com/luiisp/InsightSphere```
 
