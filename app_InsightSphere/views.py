@@ -52,6 +52,10 @@ class Login(View):
     error_message = None
 
     def get(self, request):
+        if request.user.is_authenticated:
+            return redirect('menu')
+        else:
+            pass
         return render(request, 'account/login.html', {'error_message': self.error_message})
 
     def post(self, request):
