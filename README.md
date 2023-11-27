@@ -1,6 +1,6 @@
 # Insight Sphere
 
-#### O Insight Sphere é uma aplicação de chat feita na web utilizando django, channels e websocket💡
+### O Insight Sphere é uma aplicação de chat feita na web utilizando django, channels e websocket💡
 
 Tag this project with a star 🌟
 
@@ -8,8 +8,9 @@ Tag this project with a star 🌟
 https://github.com/luiisp/InsightSphere/assets/115284250/01076467-2006-49fb-8deb-b1dae4b4ba58
 
 
-##### Crie, gerencie e converse em tempo real em canais usando o Insight Sphere
+#### Crie, gerencie e converse em tempo real em canais usando o Insight Sphere
 
+![CHATBANNER](https://github.com/luiisp/InsightSphere/assets/115284250/559ea361-e148-47a3-beab-4a648a577de3)
 
 # Acesssando:
 
