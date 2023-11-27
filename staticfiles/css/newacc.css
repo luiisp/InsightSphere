@@ -6,7 +6,7 @@
     --black-gray: #09060e;
     --white-light: #E4E4E7;
     --red: #FF4059;
-    --real-red: #F12C4C;
+    --main-color: #432cf1;
     --red-dark: #ff0033;
     --red-light: #ff5068;
     --orange-dark: #ff6600;
@@ -30,7 +30,7 @@ body, html {
 
 
 p::selection{
-    background-color: var(--real-red);
+    background-color: var(--main-color);
 
 }
 
@@ -47,14 +47,14 @@ a{
 }
 
 a:hover{
-    color: var(--real-red);
+    color: var(--main-color);
     text-decoration: underline;
 }
 
 #main {
     display: flex;
     flex-direction: row;
-    background-color: var(--black-gray);
+    background-color: #030303;
     color: var(--white-light);
     width: 100vw;
     height: 100vh;
@@ -63,9 +63,13 @@ a:hover{
     justify-content: center;
 }
 
+
 #warn{
-    font-size: 0.9em;
-    color: var(--yellow-dark);
+    display:flex;
+    font-size: 1em;
+    position: fixed;
+    top: 24%;
+    color: var(--red-dark);
 }
 
 #terms{
@@ -98,27 +102,24 @@ a:hover{
 }
 
 #input-text{
-    font-size:100%;
+    font-size:120%;
     height: 15%;
     width: 65%;
     color: var(--white-light);
     font-family: 'Montserrat', sans-serif;
-    border-radius: 13vw;
-    transition: 0.25s ease-in-out;
+    border-radius: 26px;
     user-select: none;
     background-color: var(--black-gray);
     box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
-    border: var(--real-red) solid 1px;
+    border: none;
     text-align: center;
     transition: 0.2s ease-in-out;
 }
-
-
 #card-login input:focus{
     transform: scale(1.01);
     box-shadow: 0 17px 19px rgba(0, 0, 0, 0.1);
     outline: none;
-    border: var(--purple-dark) solid 1px;
+    border: var(--white-light) solid 0.2px;
 }
 #logo {
     user-select: none;
@@ -180,6 +181,10 @@ a:hover{
     #card-login button{
         width: 80%;
     }
+    
+#warn{
+    top: 32%;}
+
 
 
 }

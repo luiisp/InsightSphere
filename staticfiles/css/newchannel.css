@@ -54,7 +54,7 @@ a:hover{
 #main {
     display: flex;
     flex-direction: row;
-    background-color: var(--black-gray);
+    background-color: #030303;
     color: var(--white-light);
     width: 100vw;
     height: 100vh;
@@ -64,9 +64,13 @@ a:hover{
 }
 
 #warn{
-    font-size: 0.9em;
-    color: var(--yellow-dark);
+    display:flex;
+    font-size: 1em;
+    position: fixed;
+    top: 24%;
+    color: var(--red-dark);
 }
+
 
 #terms{
     font-size: 0.8em;
@@ -98,17 +102,16 @@ a:hover{
 }
 
 #input-text{
-    font-size:100%;
+    font-size:120%;
     height: 15%;
     width: 65%;
     color: var(--white-light);
     font-family: 'Montserrat', sans-serif;
-    border-radius: 13vw;
-    transition: 0.25s ease-in-out;
+    border-radius: 26px;
     user-select: none;
     background-color: var(--black-gray);
     box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
-    border: var(--real-red) solid 1px;
+    border: none;
     text-align: center;
     transition: 0.2s ease-in-out;
 }
@@ -118,13 +121,14 @@ a:hover{
     transform: scale(1.01);
     box-shadow: 0 17px 19px rgba(0, 0, 0, 0.1);
     outline: none;
-    border: var(--purple-dark) solid 1px;
+    border: var(--white-light) solid 0.2px;
 }
 #logo {
     user-select: none;
     max-width: 100%; 
     height: 22vw;
     max-height: 100%; 
+    filter: hue-rotate(350deg);
 }
 
 #input-img{
@@ -180,6 +184,11 @@ a:hover{
     #card-login button{
         width: 80%;
     }
+
+    #warn{
+        top: 16%;
+    }
+    
 
 
 }

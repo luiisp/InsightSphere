@@ -6,7 +6,7 @@
     --black-gray: #09060e;
     --white-light: #E4E4E7;
     --red: #FF4059;
-    --real-red: #F12C4C;
+    --main-color: #432cf1;
     --red-dark: #ff0033;
     --red-light: #ff5068;
     --orange-dark: #ff6600;
@@ -30,7 +30,7 @@ body, html {
 
 
 p::selection{
-    background-color: var(--real-red);
+    background-color: var(--main-color);
 
 }
 
@@ -47,7 +47,7 @@ a{
 }
 
 a:hover{
-    color: var(--real-red);
+    color: var(--main-color);
     text-decoration: underline;
 }
 
@@ -60,23 +60,9 @@ a:hover{
     font-family: 'Montserrat', sans-serif;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #0D0A14, #0a060e,#0D0A14);
-    background-size: 200% 100%;
-    animation: animateWaves 4s linear infinite alternate-reverse;
+    background-color: #030303;
 }
 
-@keyframes animateWaves {
-    0% {
-      background-position: 200% 0;
-
-      
-      
-    }
-    100% {
-      background-position: -200% 0;
-
-    }
-  }
   
   input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #0D0A14 inset; 
@@ -85,7 +71,7 @@ a:hover{
   
 
   input:-webkit-autofill:focus {
-    border: 2px solid var(--sua-cor-de-borda); 
+    border: none; 
   }
 
 
@@ -94,7 +80,7 @@ a:hover{
     font-size: 1em;
     position: fixed;
     top: 14%;
-    color: var(--real-red);
+    color: var(--red-dark);
 }
 
 #terms{
@@ -133,12 +119,11 @@ a:hover{
     width: 65%;
     color: var(--white-light);
     font-family: 'Montserrat', sans-serif;
-    border-radius: 26vw;
-    transition: 0.25s ease-in-out;
+    border-radius: 26px;
     user-select: none;
     background-color: var(--black-gray);
     box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
-    border: var(--real-red) solid 1px;
+    border: none;
     text-align: center;
     transition: 0.2s ease-in-out;
 }
@@ -148,13 +133,10 @@ a:hover{
     transform: scale(1.01);
     box-shadow: 0 17px 19px rgba(0, 0, 0, 0.1);
     outline: none;
-    border: var(--purple-dark) solid 1px;
+    border: var(--white-light) 0.1px solid;
     background-color: var(--black-gray);
 }
 
-#card-login input:active{
-    background-color: var(--black-gray);
-}
 
 #card-login button{
     font-size:130%;

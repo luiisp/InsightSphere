@@ -61,24 +61,10 @@ a:hover{
     font-family: 'Montserrat', sans-serif;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #0D0A14, #130b1a,#0D0A14);
-    background-size: 200% 100%;
-    animation: animateWaves 4s linear infinite alternate-reverse;
+    background-color: #030303;
+
 }
 
-@keyframes animateWaves {
-    0% {
-      background-position: 200% 0;
-
-      
-      
-    }
-    100% {
-      background-position: -200% 0;
-
-    }
-  }
-  
 
 #warn{
     display:none;
@@ -122,14 +108,13 @@ a:hover{
     width: 65%;
     color: var(--white-light);
     font-family: 'Montserrat', sans-serif;
-    border-radius: 13vw;
+    border-radius: 26px;
     transition: 0.25s ease-in-out;
     user-select: none;
     background-color: var(--black-gray);
     box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
-    border: var(--real-red) solid 1px;
+    border: none;
     text-align: center;
-    transition: 0.2s ease-in-out;
 }
 
 
@@ -137,7 +122,7 @@ a:hover{
     transform: scale(1.01);
     box-shadow: 0 17px 19px rgba(0, 0, 0, 0.1);
     outline: none;
-    border: var(--purple-dark) solid 1px;
+    border: none;
 }
 
 
