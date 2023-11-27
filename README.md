@@ -7,13 +7,6 @@ Tag this project with a star 🌟
 ### Preview
 https://github.com/luiisp/InsightSphere/assets/115284250/01076467-2006-49fb-8deb-b1dae4b4ba58
 
-
-#### Crie, gerencie e converse em tempo real em canais usando o Insight Sphere
-
-![CHATBANNER](https://github.com/luiisp/InsightSphere/assets/115284250/559ea361-e148-47a3-beab-4a648a577de3)
-
-# Acesssando:
-
 ## Pré-requisitos
 
 Certifique-se de ter os seguintes pré-requisitos instalados em sua máquina:
@@ -44,4 +37,8 @@ Certifique-se de ter os seguintes pré-requisitos instalados em sua máquina:
 
 ```python manage.py runserver```
 
+# Crie, gerencie e converse em tempo real em canais usando o Insight Sphere
 
+![CHATBANNER](https://github.com/luiisp/InsightSphere/assets/115284250/c3be1068-3c2a-4105-8b47-64b114535d71)
+
+### Sinta-se livre para contribuir dando sugestões ou trabalhando no projeto!
