@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/anonim.css' %}">
     <title>Insight Sphere - Login</title>
-    <link rel="icon" href="{% static 'assets/img/512logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/512logo.png' %}?v1" type="image/x-icon">
 </head>
 <body>
     <div id="main">
-        <img id="logo"  src="{% static 'assets/img/512logo.png' %}" alt="logo">
+        <img id="logo"  src="{% static 'assets/img/512logo.png' %}?v1" alt="logo">
         <div id="login">
             <form method="post" id="card-login">
                 {% csrf_token %}
